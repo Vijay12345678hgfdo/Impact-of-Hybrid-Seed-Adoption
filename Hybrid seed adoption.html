@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact of Hybrid Seed Adoption</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    section {
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 800px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { color: #4CAF50; }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Socio-Ecological Impact of Hybrid Seed Adoption</h1>
+    <p>Study on changes in land use, farming practices, and biodiversity.</p>
+  </header>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>This project analyzes how hybrid seed adoption affects farming patterns, land use, and biodiversity in local regions.</p>
+  </section>
+
+  <section id="findings">
+    <h2>Key Findings</h2>
+    <ul>
+      <li>Change in crop patterns due to hybrid seeds.</li>
+      <li>Increased productivity in some crops, decreased in others.</li>
+      <li>Impact on local biodiversity and soil health.</li>
+      <li>Changes in farmer practices and seed dependency.</li>
+    </ul>
+  </section>
+
+  <section id="charts">
+    <h2>Visual Data</h2>
+    <canvas id="impactChart" width="400" height="200"></canvas>
+  </section>
+
+  <footer>
+    <p>Project by Vijay Chaurasiya | BCA Student</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('impactChart').getContext('2d');
+    const impactChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Crop A', 'Crop B', 'Crop C', 'Crop D'],
+        datasets: [{
+          label: 'Yield Change (%)',
+          data: [20, -10, 15, 5],
+          backgroundColor: ['#4CAF50', '#FF6384', '#36A2EB', '#FFCE56']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'top' },
+          title: { display: true, text: 'Yield Impact of Hybrid Seeds' }
+        },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  </script>
+
+</body>
+</html>
